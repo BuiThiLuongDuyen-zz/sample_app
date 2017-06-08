@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       #helperに行く
       log_in user
       #表示ページ
-      redirect_to user
+      redirect_back_or user
     else
       # エラーメッセージを作成する
       flash.now[:danger] = 'Invalid email/password combination'
